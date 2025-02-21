@@ -4,6 +4,8 @@ export const translations = {
         // Head
         "head-title-index": "Bloodborne Wiki - La Pesadilla del Cazador",
         "head-title-armas": "Bloodborne Wiki - Armas Trucadas",
+        "head-title-mainbosses": "Bloodborne Wiki - Jefes Principales",
+        "head-title-optbosses": "Bloodborne Wiki - Jefes Opcionales",
 
         // Header
         "wiki-title": "Bloodborne Wiki",
@@ -75,6 +77,8 @@ export const translations = {
         // Head
         "head-title-index": "Bloodborne Wiki - Hunter's Nightmare",
         "head-title-armas": "Bloodborne Wiki - Trick Weapons",
+        "head-title-mainbosses": "Bloodborne Wiki - Main Bosses",
+        "head-title-optbosses": "Bloodborne Wiki - Optional Bosses",
 
         // Header
         "wiki-title": "Bloodborne Wiki",
