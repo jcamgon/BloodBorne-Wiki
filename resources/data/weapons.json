@@ -1,0 +1,124 @@
+{
+    "weapons": [
+      {
+        "img": "./resources/imgs/weapons/saw_cleaver.png",
+        "name": "Cuchilla Dentada",
+        "normal_form": "Cuchilla",
+        "trick_form": "Sierra Cuchilla",
+        "description": "Una de las armas iniciales. En su forma normal es un hacha de un solo filo, pero al extenderse se convierte en una larga cuchilla para ataques de barrido.",
+        "damage": {
+          "physical": 90,
+          "blood": 0,
+          "arcane": 0
+        },
+        "scaling": {
+          "strength": "C",
+          "skill": "D",
+          "arcane": "-"
+        }
+      },
+      {
+        "img": "./resources/imgs/weapons/hunter_axe.png",
+        "name": "Hacha de Cazador",
+        "normal_form": "Hacha",
+        "trick_form": "Alabarda",
+        "description": "Un hacha con gran poder. En su forma extendida se convierte en un arma de dos manos con gran alcance.",
+        "damage": {
+          "physical": 98,
+          "blood": 0,
+          "arcane": 0
+        },
+        "scaling": {
+          "strength": "B",
+          "skill": "E",
+          "arcane": "-"
+        }
+      },
+      {
+        "img": "./resources/imgs/weapons/ludwigs_holy_blade.png",
+        "name": "Espada sagrada de Ludwig",
+        "normal_form": "Espada de una Mano",
+        "trick_form": "Gran Espada",
+        "description": "Una gran espada sagrada que puede usarse como un sable ágil o como una colosal espada a dos manos.",
+        "damage": {
+          "physical": 100,
+          "blood": 0,
+          "arcane": 50
+        },
+        "scaling": {
+          "strength": "B",
+          "skill": "C",
+          "arcane": "D"
+        }
+      },
+      {
+        "img": "./resources/imgs/weapons/rakuyo.png",
+        "name": "Rakuyo",
+        "normal_form": "Espada Gemela",
+        "trick_form": "Sable y daga",
+        "description": "Arma de Lady Maria. Una espada doble que puede dividirse en dos cuchillas para un estilo de lucha agresivo.",
+        "damage": {
+          "physical": 85,
+          "blood": 0,
+          "arcane": 0
+        },
+        "scaling": {
+          "strength": "D",
+          "skill": "A",
+          "arcane": "-"
+        }
+      },
+      {
+        "img": "./resources/imgs/weapons/whirligig_saw.png",
+        "name": "Sierra Giratoria",
+        "normal_form": "Maza",
+        "trick_form": "Sierra Giratoria",
+        "description": "Un arma brutal que en su forma trucada gira como una sierra mecánica, desgarrando a los enemigos con rapidez.",
+        "damage": {
+          "physical": 105,
+          "blood": 0,
+          "arcane": 0
+        },
+        "scaling": {
+          "strength": "B",
+          "skill": "D",
+          "arcane": "-"
+        }
+      },
+      {
+        "img": "./resources/imgs/weapons/boom_hammer.png",
+        "name": "Martillo Explosivo",
+        "normal_form": "Martillo",
+        "trick_form": "Martillo Explosivo",
+        "description": "Un martillo que, al activarse, produce una explosión de fuego al golpear al enemigo.",
+        "damage": {
+          "physical": 120,
+          "blood": 0,
+          "arcane": 30
+        },
+        "scaling": {
+          "strength": "B",
+          "skill": "E",
+          "arcane": "C"
+        }
+      },
+      {
+        "img": "./resources/imgs/weapons/burial_blade.png",
+        "name": "Hoja de Entierro",
+        "normal_form": "Espada Curva",
+        "trick_form": "Guadaña",
+        "description": "La icónica guadaña de Gehrman. Puede alternar entre una espada curva y una guadaña de gran alcance.",
+        "damage": {
+          "physical": 95,
+          "blood": 0,
+          "arcane": 50
+        },
+        "scaling": {
+          "strength": "C",
+          "skill": "B",
+          "arcane": "D"
+        }
+      }
+    ]
+  }
+  

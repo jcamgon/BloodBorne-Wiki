@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="head-title-armas">Bloodborne Wiki - Armas Trucadas</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./resources/imgs/favicon.png" />
+    <script type="module">
+      import { initializeLanguageSelector } from "./js/translations.js";
+      document.addEventListener("DOMContentLoaded", initializeLanguageSelector);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="language-selector">
+        <button class="language-btn" id="languageBtn">
+          <img src="./resources/flags/es.png" alt="Español" id="selectedFlag" />
+          <span id="selectedLanguage">Español</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="language-dropdown" id="languageDropdown">
+          <a href="#" class="language-option" data-language="es">
+            <img src="./resources/flags/es.png" alt="Español" />
+            Español
+          </a>
+          <a href="#" class="language-option" data-language="en">
+            <img src="./resources/flags/en.png" alt="English" />
+            English
+          </a>
+        </div>
+      </div>
+      <h1 data-translate="wiki-title"><a href="index.html">Bloodborne Wiki</a></h1>
+      <p data-translate="wiki-subtitle">
+        Guía completa de la pesadilla de Yharnam
+      </p>
+      <div class="search-bar">
+        <input
+          data-translate="search-placeholder"
+          type="text"
+          placeholder="Buscar en la wiki..."
+        />
+      </div>
+      <div class="auth-buttons">
+        <button data-translate="login" class="auth-btn" id="loginBtn">
+          Iniciar Sesión
+        </button>
+        <button data-translate="signin" class="auth-btn" id="registerBtn">
+          Registrarse
+        </button>
+      </div>
+    </header>
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" data-modal="loginModal">&times;</span>
+        <h2 class="modal-title">Iniciar Sesión</h2>
+        <form id="loginForm" novalidate>
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" required />
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Contraseña</label>
+            <input type="password" id="loginPassword" required />
+          </div>
+          <button type="submit" class="submit-btn">Iniciar Sesión</button>
+          <div class="form-footer">
+            <a href="#" id="forgotPassword">¿Olvidaste tu contraseña?</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" data-modal="registerModal">&times;</span>
+        <h2 class="modal-title">Registrarse</h2>
+        <form id="registerForm" novalidate>
+          <div class="form-group">
+            <label for="registerUsername">Nombre de usuario</label>
+            <input type="text" id="registerUsername" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="registerPassword">Contraseña</label>
+            <input
+              type="password"
+              id="registerPassword"
+              name="password"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirmar Contraseña</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              required
+            />
+          </div>
+          <button type="submit" class="submit-btn">Registrarse</button>
+        </form>
+      </div>
+    </div>
+
+      <h2 data-translate="weapons-item-1" class="page-title">Armas Trucadas</h2>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Forma Normal</th>
+              <th>Forma Trucada</th>
+              <th>Daño Físico</th>
+              <th>Daño de Sangre</th>
+              <th>Daño Arcano</th>
+            </tr>
+          </thead>
+          <tbody id="weaponTableBody">
+            <!-- Los datos se insertarán aquí con JS -->
+          </tbody>
+        </table>
+      </div>
+
+
+    <footer class="footer">
+      <div class="quick-links">
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Contacto</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Contribuir</a>
+      </div>
+      <p>© 2025 Bloodborne Wiki - Creado por cazadores, para cazadores</p>
+    </footer>
+
+    <script>
+      // Toggle del dropdown de idioma
+      const languageBtn = document.getElementById("languageBtn");
+      const languageDropdown = document.getElementById("languageDropdown");
+
+      languageBtn.addEventListener("click", () => {
+        languageDropdown.classList.toggle("show");
+      });
+
+      // Cerrar el dropdown cuando se hace click fuera
+      document.addEventListener("click", (e) => {
+        if (!languageBtn.contains(e.target)) {
+          languageDropdown.classList.remove("show");
+        }
+      });
+    </script>
+
+    <script>
+      // Funcionalidad de los modales
+      function initializeModals() {
+        const loginBtn = document.getElementById("loginBtn");
+        const registerBtn = document.getElementById("registerBtn");
+        const closeButtons = document.querySelectorAll(".close-modal");
+        const modals = document.querySelectorAll(".modal");
+
+        // Abrir modales
+        loginBtn.addEventListener("click", () => {
+          document.getElementById("loginModal").style.display = "block";
+        });
+
+        registerBtn.addEventListener("click", () => {
+          document.getElementById("registerModal").style.display = "block";
+        });
+
+        // Cerrar modales
+        closeButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const modalId = button.getAttribute("data-modal");
+            document.getElementById(modalId).style.display = "none";
+          });
+        });
+
+        // Cerrar al hacer click fuera del modal
+        window.addEventListener("click", (e) => {
+          modals.forEach((modal) => {
+            if (e.target === modal) {
+              modal.style.display = "none";
+            }
+          });
+        });
+
+        // Prevenir envío de formularios (para demo)
+        document.getElementById("loginForm").addEventListener("submit", (e) => {
+          e.preventDefault();
+          // Aquí iría la lógica de login
+          console.log("Login submitted");
+        });
+
+        document
+          .getElementById("registerForm")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+            // Aquí iría la lógica de registro
+            console.log("Register submitted");
+          });
+      }
+
+      // Inicializar los modales cuando el DOM esté listo
+      document.addEventListener("DOMContentLoaded", initializeModals);
+    </script>
+
+    <script src="./js/tablaWeapons.js"></script>
+    <script src="./js/validation.js"></script>
+    <script src="./js/loginValidation.js"></script>
+  </body>
+</html>

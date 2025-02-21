@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-translate="head-title-index">Bloodborne Wiki - La Pesadilla del Cazador</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./resources/imgs/favicon.png" />
+    <script type="module">
+      import { initializeLanguageSelector } from "./js/translations.js";
+      document.addEventListener("DOMContentLoaded", initializeLanguageSelector);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="language-selector">
+        <button class="language-btn" id="languageBtn">
+          <img src="./resources/flags/es.png" alt="Español" id="selectedFlag" />
+          <span id="selectedLanguage">Español</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="language-dropdown" id="languageDropdown">
+          <a href="#" class="language-option" data-language="es">
+            <img src="./resources/flags/es.png" alt="Español" />
+            Español
+          </a>
+          <a href="#" class="language-option" data-language="en">
+            <img src="./resources/flags/en.png" alt="English" />
+            English
+          </a>
+        </div>
+      </div>
+      <h1 data-translate="wiki-title"><a href="index.html">Bloodborne Wiki</a></h1>
+      <!-- <a href="index.html"><img class="logo-banner" src="./resources/imgs/Wiki-wordmark.png" /></a> -->
+      <p data-translate="wiki-subtitle">
+        Guía completa de la pesadilla de Yharnam
+      </p>
+      <div class="search-bar">
+        <input
+          data-translate="search-placeholder"
+          type="text"
+          placeholder="Buscar en la wiki..."
+        />
+      </div>
+      <div class="auth-buttons">
+        <button data-translate="login" class="auth-btn" id="loginBtn">Iniciar Sesión</button>
+        <button data-translate="signin" class="auth-btn" id="registerBtn">Registrarse</button>
+      </div>
+    </header>
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" data-modal="loginModal">&times;</span>
+        <h2 class="modal-title">Iniciar Sesión</h2>
+        <form id="loginForm" novalidate>
+            <div class="form-group">
+                <label for="loginEmail">Email</label>
+                <input type="email" id="loginEmail" required />
+            </div>
+            <div class="form-group">
+                <label for="loginPassword">Contraseña</label>
+                <input type="password" id="loginPassword" required />
+            </div>
+            <button type="submit" class="submit-btn">Iniciar Sesión</button>
+            <div class="form-footer">
+                <a href="#" id="forgotPassword">¿Olvidaste tu contraseña?</a>
+            </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal de Registro -->
+    <div id="registerModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal" data-modal="registerModal">&times;</span>
+        <h2 class="modal-title">Registrarse</h2>
+        <form id="registerForm" novalidate>
+            <div class="form-group">
+                <label for="registerUsername">Nombre de usuario</label>
+                <input type="text" id="registerUsername" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="registerPassword">Contraseña</label>
+                <input type="password" id="registerPassword" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirmar Contraseña</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="submit" class="submit-btn">Registrarse</button>
+        </form>
+      </div>
+    </div>
+
+    <main class="main-content">
+      <div class="category-card">
+        <h2 data-translate="lore-title">
+          <!-- <i class="fas fa-skull"></i> -->
+          Historia y Lore
+        </h2>
+        <ul>
+          <li data-translate="lore-item-1">La historia de Yharnam</li>
+          <li data-translate="lore-item-2">Los Grandes Antiguos</li>
+          <li data-translate="lore-item-3">La Iglesia de la Sanación</li>
+          <li data-translate="lore-item-4">La Escuela de Mensis</li>
+        </ul>
+      </div>
+
+      <div class="category-card">
+        <h2 data-translate="weapons-title">
+          <!-- <i class="fas fa-khanda"></i> -->
+          Armas y Equipo
+        </h2>
+        <ul>
+          <li data-translate="weapons-item-1"><a href="armas.html">Armas Trucadas</a></li>
+          <li data-translate="weapons-item-2">Armas de fuego</li>
+          <li data-translate="weapons-item-3">Herramientas de cazador</li>
+          <li data-translate="weapons-item-4">Vestuario y armaduras</li>
+        </ul>
+      </div>
+
+      <div class="category-card">
+        <h2 data-translate="bosses-title">
+          <!-- <i class="fas fa-dragon"></i> -->
+          Jefes y Enemigos
+        </h2>
+        <ul>
+          <li data-translate="bosses-item-1">Bestias de Yharnam</li>
+          <li data-translate="bosses-item-2"><a href="bosses.html">Jefes principales</a></li>
+          <li data-translate="bosses-item-3"><a href="bosses-opcionales.html">Jefes opcionales</a></li>
+          <li data-translate="bosses-item-4">Grandes Antiguos</li>
+        </ul>
+      </div>
+
+      <div class="category-card">
+        <h2 data-translate="locations-title">
+          <!-- <i class="fas fa-map-marked-alt"></i> -->
+          Localizaciones
+        </h2>
+        <ul>
+          <li data-translate="locations-item-1">Yharnam Central</li>
+          <li data-translate="locations-item-2">Vieja Yharnam</li>
+          <li data-translate="locations-item-3">Catedral del Distrito</li>
+          <li data-translate="locations-item-4">Pesadilla del Cazador</li>
+        </ul>
+      </div>
+
+      <!-- <div class="category-card">
+            <h2><i class="fas fa-vial"></i> Mecánicas</h2>
+            <ul>
+                <li>Sistema de combate</li>
+                <li>Sangre de eco</li>
+                <li>Insight y Locura</li>
+                <li>Cálices y Mazmorras</li>
+            </ul>
+        </div>
+
+        <div class="category-card">
+            <h2><i class="fas fa-users"></i> Builds y Guías</h2>
+            <ul>
+                <li>Builds populares</li>
+                <li>Guía para principiantes</li>
+                <li>Secretos y trucos</li>
+                <li>Guía de platino</li>
+            </ul>
+        </div> -->
+    </main>
+
+    <footer class="footer">
+      <div class="quick-links">
+        <a href="#">Sobre nosotros</a>
+        <a href="#">Contacto</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Contribuir</a>
+      </div>
+      <p>© 2025 Bloodborne Wiki - Creado por cazadores, para cazadores</p>
+    </footer>
+
+    <script>
+      // Toggle del dropdown de idioma
+      const languageBtn = document.getElementById("languageBtn");
+      const languageDropdown = document.getElementById("languageDropdown");
+
+      languageBtn.addEventListener("click", () => {
+        languageDropdown.classList.toggle("show");
+      });
+
+      // Cerrar el dropdown cuando se hace click fuera
+      document.addEventListener("click", (e) => {
+        if (!languageBtn.contains(e.target)) {
+          languageDropdown.classList.remove("show");
+        }
+      });
+    </script>
+
+    <script>
+      // Funcionalidad de los modales
+      function initializeModals() {
+        const loginBtn = document.getElementById("loginBtn");
+        const registerBtn = document.getElementById("registerBtn");
+        const closeButtons = document.querySelectorAll(".close-modal");
+        const modals = document.querySelectorAll(".modal");
+
+        // Abrir modales
+        loginBtn.addEventListener("click", () => {
+          document.getElementById("loginModal").style.display = "block";
+        });
+
+        registerBtn.addEventListener("click", () => {
+          document.getElementById("registerModal").style.display = "block";
+        });
+
+        // Cerrar modales
+        closeButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            const modalId = button.getAttribute("data-modal");
+            document.getElementById(modalId).style.display = "none";
+          });
+        });
+
+        // Cerrar al hacer click fuera del modal
+        window.addEventListener("click", (e) => {
+          modals.forEach((modal) => {
+            if (e.target === modal) {
+              modal.style.display = "none";
+            }
+          });
+        });
+
+        // Prevenir envío de formularios (para demo)
+        document.getElementById("loginForm").addEventListener("submit", (e) => {
+          e.preventDefault();
+          // Aquí iría la lógica de login
+          console.log("Login submitted");
+        });
+
+        document
+          .getElementById("registerForm")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+            // Aquí iría la lógica de registro
+            console.log("Register submitted");
+          });
+      }
+
+      // Inicializar los modales cuando el DOM esté listo
+      document.addEventListener("DOMContentLoaded", initializeModals);
+    </script>
+
+    <script src="./js/validation.js"></script>
+    <script src="./js/loginValidation.js"></script>
+  </body>
+</html>

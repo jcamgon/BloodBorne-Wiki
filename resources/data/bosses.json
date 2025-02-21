@@ -1,0 +1,214 @@
+{
+    "bosses": [
+      {
+        "name": "Bestia Clérigo",
+        "location": "Puente de la Sala Central",
+        "weaknesses": "Fuego, Serrado",
+        "optional": false,
+        "image": "./resources/imgs/bosses/cleric_beast.jpg",
+        "hp": 3000,
+        "blood_echoes": 4000,
+        "insight": 1
+      },
+      {
+        "name": "Padre Gascoigne",
+        "location": "Tumba de Oedon",
+        "weaknesses": "Fuego, Parry, Música",
+        "optional": false,
+        "image": "./resources/imgs/bosses/gascoigne.jpg",
+        "hp": 1900,
+        "blood_echoes": 1800,
+        "insight": 1
+      },
+      {
+        "name": "Bestia Sedienta de Sangre",
+        "location": "Vieja Yharnam",
+        "weaknesses": "Fuego, Serrado",
+        "optional": true,
+        "image": "./resources/imgs/bosses/blood_starved.jpg",
+        "hp": 2400,
+        "blood_echoes": 6000,
+        "insight": 1
+      },
+      {
+        "name": "Vicaria Amelia",
+        "location": "Catedral del Distrito",
+        "weaknesses": "Fuego, Serrado, Numismática",
+        "optional": false,
+        "image": "./resources/imgs/bosses/amelia.jpg",
+        "hp": 5400,
+        "blood_echoes": 15000,
+        "insight": 1
+      },
+      {
+        "name": "Brujas de Hemwick",
+        "location": "Callejón de Hemwick",
+        "weaknesses": "Empuje, Sin Insight",
+        "optional": true,
+        "image": "./resources/imgs/bosses/witch_hemwick.jpg",
+        "hp": 2700,
+        "blood_echoes": 13000,
+        "insight": 1
+      },
+      {
+        "name": "Martir Logarius",
+        "location": "Castillo Cainhurst",
+        "weaknesses": "Arcano, Parry",
+        "optional": true,
+        "image": "./resources/imgs/bosses/logarius.jpg",
+        "hp": 6400,
+        "blood_echoes": 28000,
+        "insight": 2
+      },
+      {
+        "name": "Sombras de Yharnam",
+        "location": "Bosque Prohibido",
+        "weaknesses": "Arcano, Rayo, Fuego",
+        "optional": false,
+        "image": "./resources/imgs/bosses/shadows.jpg",
+        "hp": 2000,
+        "blood_echoes": 16000,
+        "insight": 1
+      },
+      {
+        "name": "Rom, la Araña Vacua",
+        "location": "Lago Lunario",
+        "weaknesses": "Rayo, Empuje",
+        "optional": false,
+        "image": "./resources/imgs/bosses/rom.jpg",
+        "hp": 4000,
+        "blood_echoes": 18000,
+        "insight": 2
+      },
+      {
+        "name": "Pálido",
+        "location": "Yahar'gul (pre-Rom)",
+        "weaknesses": "Fuego, Serrado",
+        "optional": true,
+        "image": "./resources/imgs/bosses/darkbeast.jpg",
+        "hp": 4400,
+        "blood_echoes": 25000,
+        "insight": 2
+      },
+      {
+        "name": "El Renacido",
+        "location": "Yahar'gul",
+        "weaknesses": "Serrado, Fuego",
+        "optional": false,
+        "image": "./resources/imgs/bosses/one_reborn.jpg",
+        "hp": 7200,
+        "blood_echoes": 22000,
+        "insight": 2
+      },
+      {
+        "name": "Micolash",
+        "location": "Pesadilla de Mensis",
+        "weaknesses": "Veneno, Daño físico",
+        "optional": false,
+        "image": "./resources/imgs/bosses/micolash.jpg",
+        "hp": 4500,
+        "blood_echoes": 27000,
+        "insight": 2
+      },
+      {
+        "name": "Nodriza de Mergo",
+        "location": "Pesadilla de Mensis",
+        "weaknesses": "Arcano, Empuje",
+        "optional": false,
+        "image": "./resources/imgs/bosses/wet_nurse.jpg",
+        "hp": 8000,
+        "blood_echoes": 36000,
+        "insight": 3
+      },
+      {
+        "name": "Celestial Emissary",
+        "location": "Jardín del Edificio de Investigación",
+        "weaknesses": "Empuje, Rayo",
+        "optional": true,
+        "image": "./resources/imgs/bosses/emissary.jpg",
+        "hp": 3400,
+        "blood_echoes": 12000,
+        "insight": 1
+      },
+      {
+        "name": "Ebrietas",
+        "location": "Altar de la Desesperación",
+        "weaknesses": "Arcano, Rayo",
+        "optional": true,
+        "image": "./resources/imgs/bosses/ebrietas.jpg",
+        "hp": 8200,
+        "blood_echoes": 41000,
+        "insight": 2
+      },
+      {
+        "name": "Gehrman",
+        "location": "Sueño del Cazador",
+        "weaknesses": "Parry, Veneno",
+        "optional": true,
+        "image": "./resources/imgs/bosses/gehrman.jpg",
+        "hp": 9500,
+        "blood_echoes": 100000,
+        "insight": 3
+      },
+      {
+        "name": "Presencia Lunar",
+        "location": "Sueño del Cazador",
+        "weaknesses": "Daño físico, Serrado",
+        "optional": true,
+        "image": "./resources/imgs/bosses/moon_presence.jpg",
+        "hp": 12000,
+        "blood_echoes": 120000,
+        "insight": 3
+      },
+      {
+        "name": "Ludwig",
+        "location": "Pesadilla del Cazador",
+        "weaknesses": "Serrado, Fuego",
+        "optional": true,
+        "image": "./resources/imgs/bosses/ludwig.jpg",
+        "hp": 15000,
+        "blood_echoes": 83000,
+        "insight": 3
+      },
+      {
+        "name": "Fracasados Vivientes",
+        "location": "Pesadilla del Cazador",
+        "weaknesses": "Fuego, Serrado",
+        "optional": true,
+        "image": "./resources/imgs/bosses/living_failures.jpg",
+        "hp": 10000,
+        "blood_echoes": 52000,
+        "insight": 2
+      },
+      {
+        "name": "Lady Maria",
+        "location": "Torre del Reloj Astral",
+        "weaknesses": "Parry, Fuego",
+        "optional": true,
+        "image": "./resources/imgs/bosses/lady_maria.jpg",
+        "hp": 13000,
+        "blood_echoes": 65000,
+        "insight": 3
+      },
+      {
+        "name": "Huérfano de Kos",
+        "location": "Costa de la Pesadilla",
+        "weaknesses": "Rayo, Fuego",
+        "optional": true,
+        "image": "./resources/imgs/bosses/orphan.jpg",
+        "hp": 19000,
+        "blood_echoes": 150000,
+        "insight": 3
+      },
+      {
+        "name": "Bestia de Sangre Ardiente",
+        "location": "Vieja Yharnam",
+        "weaknesses": "Serrado, Fuego",
+        "optional": true,
+        "image": "./resources/imgs/bosses/laurence.jpg",
+        "hp": 21000,
+        "blood_echoes": 108000,
+        "insight": 3
+      }
+    ]
+  }
