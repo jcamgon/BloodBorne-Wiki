@@ -24,7 +24,7 @@ body {
 
 .header {
   background-color: black;
-  background-image: url(https://cdn2.steamgriddb.com/hero_thumb/a656ff539a8a86ebb396e37242753fe9.png);
+  background-image: url("../resources/imgs/banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
