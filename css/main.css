@@ -227,7 +227,7 @@ body {
 .modal-content {
   position: relative;
   background: var(--primary-dark);
-  margin: 15% auto;
+  margin: 5% auto;
   padding: 20px;
   border: 2px solid var(--accent-gold);
   width: 90%;
